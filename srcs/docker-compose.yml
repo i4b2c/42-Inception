@@ -3,11 +3,12 @@ version: '3'
 services:
   nginx:
     build:
-      context: .
-      dockerfile: ./requirements/nginx/Dockerfile
+      context: ./requirements/nginx
     container_name: nginx
     ports:
-      - "8080:80"
+      - "443:443"
     volumes:
       - ./requirements/nginx/conf/:/etc/nginx/http.d/
+        #- ./requirements/nginx/html/:/var/www/html/
+      - ./requirements/nginx/html/:/usr/share/nginx/html/
     restart: always
