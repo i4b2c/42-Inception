@@ -1,5 +1,5 @@
 FROM debian:buster
-RUN apt-get update && apt-get install -y nginx
-COPY ./conf/nginx.conf /etc/nginx/conf.d
-EXPOSE 443
+
+RUN apt-get update -y && apt-get upgrade -y && apt-get install -y nginx
+
 CMD ["nginx","-g","daemon off;"]
