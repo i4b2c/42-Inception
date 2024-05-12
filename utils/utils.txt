@@ -1,0 +1,2 @@
+clean.sh created to clean docker images and container and stop the services
+Very useful for recreating the docker!
