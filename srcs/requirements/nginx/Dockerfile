@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM debian:buster
 
 #Installing the programs to execute the nginx
 RUN apt update -y && apt upgrade -y && apt install -y \
